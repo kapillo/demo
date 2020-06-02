@@ -40,8 +40,8 @@ Blink\ Led.bin \
 all: Blink\ Led.elf secondary-outputs
 
 # Tool invocations
-Blink\ Led.elf: $(OBJS) $(USER_OBJS) C:\Users\Maurizio\Desktop\Blink\ Led\STM32L476RGTX_FLASH.ld
-	arm-none-eabi-gcc -o "Blink Led.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Maurizio\Desktop\Blink Led\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Blink Led.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Blink\ Led.elf: $(OBJS) $(USER_OBJS) C:\Users\Maurizio\Desktop\prova\demo\Blink\ Led\STM32L476RGTX_FLASH.ld
+	arm-none-eabi-gcc -o "Blink Led.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Maurizio\Desktop\prova\demo\Blink Led\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Blink Led.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
