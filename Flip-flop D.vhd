@@ -11,9 +11,9 @@ architecture behav of Dff is
 begin
 process (CLK, RESET)
 	begin
-		if (RESET = '1') then
-		 Q <= '0';
-		elsif (CLK'event and CLK='1') then
+		if (RESET = '0') then
+		 Q <= '1';
+		elsif (CLK'event and CLK='0') then
 		 Q <= D;
 		end if;
 	end process;
